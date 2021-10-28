@@ -4,7 +4,7 @@ install.packages("magrittr")
 library(tidyverse)
 library(magrittr)
 
-arrange_rename_sps <- function(path) {
+arrange_rename_sps_f <- function(path) {
   read_lines(path) %>%
     map_chr(~ str_replace_all(., c("=" = " = ", "\\s+" = " ", "^ " = "", "\\)\\(" = "\\) \\("))) %>%
     str_extract_all("^RENAME VARIABLES.{1,12}=.{1,}.|^COMPUTE.{1,}=") %>%
@@ -75,5 +75,6 @@ arrange_rename_sps <- function(path) {
   }
 }
 
-path <- "/Users/siard/Desktop/rename_syntax.sps"
-arrange_rename_sps(path)
+arrange_rename_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/merger/arrange_rename_sps.R")[1]))
+
+arrange_rename_sps("/Users/siard/Desktop/rename_syntax.sps")
