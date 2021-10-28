@@ -74,5 +74,5 @@ arrange_rename_sps_f <- function(path) {
   }
 }
 
-# arrange_rename_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/merger/arrange_rename_sps.R")[1]))
+# arrange_rename_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/merger/main/arrange_rename_sps.R")[1]))
 # arrange_rename_sps("/Users/siard/Desktop/rename_syntax.sps")
