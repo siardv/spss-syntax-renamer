@@ -40,7 +40,7 @@ arrange_rename_sps_f <- function(path) {
     unlist() -> has_dups
 
   if (length(has_dups) > 0) {
-    message("Variables can only be renamed once. Remove duplicates: ", has_dups)
+    message("Source variables (x) can only be renamed once (x = y). Remove duplicate x: ", has_dups)
   } else {
     df_lines %>%
       set_names(c("to", "from")) %>%
