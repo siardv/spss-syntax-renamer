@@ -1,5 +1,4 @@
 
-#
 # 1)  Install and load packages:
 #     install.packages("tidyverse")
 #     install.packages("magrittr")
@@ -9,7 +8,6 @@
 #
 # 3)  Add path to .sps file:
 #     arrange_rename_sps("/Users/siard/Desktop/rename_syntax.sps")
-#
 
 arrange_rename_sps_f <- function(path) {
   require(tidyverse)
