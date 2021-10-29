@@ -1,5 +1,15 @@
-# install.packages("tidyverse")
-# install.packages("magrittr")
+
+#
+# 1)  Install and load packages:
+#     install.packages("tidyverse")
+#     install.packages("magrittr")
+#
+# 2)  Load remote function:
+#     arrange_rename_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/merger/main/arrange_rename_sps.R")[1]))
+#
+# 3)  Add path to .sps file:
+#     arrange_rename_sps("/Users/siard/Desktop/rename_syntax.sps")
+#
 
 arrange_rename_sps_f <- function(path) {
   require(tidyverse)
@@ -74,5 +84,4 @@ arrange_rename_sps_f <- function(path) {
   }
 }
 
-# arrange_rename_sps <- eval(parse(text = source("https://raw.githubusercontent.com/siardv/merger/main/arrange_rename_sps.R")[1]))
-# arrange_rename_sps("/Users/siard/Desktop/rename_syntax.sps")
+
